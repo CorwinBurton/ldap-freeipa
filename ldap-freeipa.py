@@ -42,18 +42,18 @@ import sys
 ##
 
 # EDIT: LDAP URI of your FreeIPA server
-LDAP_URI = "ldap://utility.lab.example.com"
+LDAP_URI = "ldap://ipa-server.bhirsch.io"
 
 # EDIT: BaseDN of your FreeIPA server
-LDAP_BASEDN = "dc=lab,dc=example,dc=com"
+LDAP_BASEDN = "dc=bhirsch,dc=io"
 
 # EDIT: DN and password of a service user on your FreeIPA server
 # (anonymous bind can't see all the necessary attributes)
 # should not be a normal end-user account since password is exposed
 # to anyone with access to this script
 # See http://www.freeipa.org/page/HowTo/LDAP (may be outdated)
-LDAP_BINDDN = "uid=inventory,cn=users,cn=accounts,dc=lab,dc=example,dc=com"
-LDAP_BINDPW = "needabetterpassword"
+LDAP_BINDDN = "uid=inventory,cn=users,cn=accounts,dc=bhirsch,dc=io"
+LDAP_BINDPW = "RedHat1!"
 
 # Work needed:
 # * LDAPS support for FreeIPA
