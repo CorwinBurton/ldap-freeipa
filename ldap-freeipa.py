@@ -33,6 +33,7 @@
 import json
 import ldap
 import sys
+import os
 
 ###################################################
 # DO NOT EDIT ABOVE THIS LINE.
@@ -52,8 +53,8 @@ LDAP_BASEDN = "dc=bhirsch,dc=io"
 # should not be a normal end-user account since password is exposed
 # to anyone with access to this script
 # See http://www.freeipa.org/page/HowTo/LDAP (may be outdated)
-LDAP_BINDDN = "uid=inventory,cn=users,cn=accounts,dc=bhirsch,dc=io"
-LDAP_BINDPW = "RedHat1!"
+LDAP_BINDDN = "uid=ldap-admin,cn=users,cn=accounts,dc=bhirsch,dc=io"
+LDAP_BINDPW = os.environ.get("IDM_PASSWORD")
 
 # Work needed:
 # * LDAPS support for FreeIPA
