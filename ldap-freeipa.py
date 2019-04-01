@@ -43,17 +43,17 @@ import os
 ##
 
 # EDIT: LDAP URI of your FreeIPA server
-LDAP_URI = "ldap://ipa-server.bhirsch.io"
+LDAP_URI = os.environ.get("IDM_URI")
 
 # EDIT: BaseDN of your FreeIPA server
-LDAP_BASEDN = "dc=bhirsch,dc=io"
+LDAP_BASEDN = os.environ.get("IDM_BASEDN")
 
 # EDIT: DN and password of a service user on your FreeIPA server
 # (anonymous bind can't see all the necessary attributes)
 # should not be a normal end-user account since password is exposed
 # to anyone with access to this script
 # See http://www.freeipa.org/page/HowTo/LDAP (may be outdated)
-LDAP_BINDDN = "uid=ldap-admin,cn=users,cn=accounts,dc=bhirsch,dc=io"
+LDAP_BINDDN = os.environ.get("IDM_BINDDN")
 LDAP_BINDPW = os.environ.get("IDM_PASSWORD")
 
 # Work needed:
