@@ -21,6 +21,8 @@ know
 * The BaseDN of your FreeIPA server
 * The DN and password for your service user
 
+For LDAPS, you must import the LDAP/IdM CA on the Tower host.
+
 === Example Tower Credentials Configuration
 .Input Configuration
 ```
