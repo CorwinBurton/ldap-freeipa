@@ -21,6 +21,39 @@ know
 * The BaseDN of your FreeIPA server
 * The DN and password for your service user
 
+=== Example Tower Credentials Configuration
+.Input Configuration
+```
+fields:
+  - type: string
+    id: uri
+    label: URI
+  - type: string
+    id: basedn
+    label: Base DN
+  - type: string
+    id: binddn
+    label: Bind DN
+  - secret: true
+    type: string
+    id: password
+    label: Bind Password
+required:
+  - uri
+  - basedn
+  - binddn
+  - password
+```
+
+.Injector Configuration
+```
+env:
+  IDM_BASEDN: '{{ basedn }}'
+  IDM_BINDDN: '{{ binddn }}'
+  IDM_PASSWORD: '{{ password }}'
+  IDM_URI: '{{ uri }}'
+```
+
 == License
 
 This project is licensed under the Simplified (2-clause) BSD license.
